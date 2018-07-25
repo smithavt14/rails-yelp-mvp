@@ -1,0 +1,11 @@
+<h1>My Favorite Restaurants</h1>
+
+<% @restaurants.each do |restaurant| %>
+  <ul>
+    <li>
+      <h3> <%= link_to restaurant.name, restaurant_path(restaurant.id) %></h3>
+      <p> <%= restaurant.category %></p>
+    </li>
+  </ul>
+<% end %>
+<%= link_to "Add New Restaurant", new_restaurant_path, class: "btn btn-primary" %>
